@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -127,6 +128,17 @@ LOGIN_REDIRECT_URL = 'home'
 # What is the default login page. This will be used by Django whenever we redirect a user to 
 # login before accessing a specific page (login required pages)
 LOGIN_URL = "login"
+
+# EMAIL RESET CONFIGURATION
+# This are the configurations required for Django to send an email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+# This is the email user and password. They are taken from environment variables
+EMAIL_HOST_USER = os.environ.get('heronet_email')
+EMAIL_HOST_PASSWORD = os.environ.get('heronet_pass')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
