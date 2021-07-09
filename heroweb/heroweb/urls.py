@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
-from users.views import register, mock_home
+from users.views import register, mock_home, profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +28,5 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name="login"),
     # Same as login but for loggin out
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name="logout"),
+    path('profile/', profile, name="profile"),
 ]
