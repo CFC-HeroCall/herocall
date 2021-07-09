@@ -14,8 +14,7 @@ def register(request):
         #If valid, save
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get("username")
-            #Tell the user that the registration was succesful
+            #Tell the user that the registration was succesful. This will be functional later on
             messages.success(request, f"Account created. Now you can login")
             #Redirect to the login page
             return redirect("login")
@@ -23,5 +22,5 @@ def register(request):
     #If not, we only show the form to the user
     else:
         form = UserRegisterForm()
-        
+
     return render(request, 'register.html', {'form':form})
