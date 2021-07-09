@@ -24,3 +24,6 @@ def register(request):
         form = UserRegisterForm()
 
     return render(request, 'register.html', {'form':form})
+
+def mock_home(request):
+    return render(request, 'mock_home.html')

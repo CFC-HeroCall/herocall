@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
 
-from users.views import register
+from users.views import register, mock_home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #This is just a mock version of a home page for me to test the redirection functionalities
+    path('mock_home/', mock_home, name="home"),
     path('create_account/', register, name="create_account"),
+    #That is an automatic view done by Django. I'm only defining the file that it has to redirect to
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name="login"),
 ]

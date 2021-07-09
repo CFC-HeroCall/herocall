@@ -1,0 +1,26 @@
+<form method="POST">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Log in</legend>
+        {{ form }}
+    </fieldset>
+    <div>
+        <button type="submit">Log in</button>
+    </div>
+</form>
+<div>
+    <div>
+        <smal>
+            Need an account? <a href="{% url 'create_account' %}">Sign up</a>
+        </small>
+    </div>
+    <!-- This is the way Django interprets comments. If not, it will still try to execute the inline python -->
+    <!-- I will later on add this functionality. For now, it will be commented -->
+    {% comment %}
+    <div>
+        <small>
+            Forgot# your password? <a href="{% url 'password_reset' %}">Reset it</a>
+        </small>
+    </div>
+    {% endcomment %}
+</div>
