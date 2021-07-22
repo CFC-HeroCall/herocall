@@ -18,6 +18,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from users.views import register, mock_home, profile
+from main.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -51,4 +52,6 @@ urlpatterns = [
     path('password_reset_complete/',
         auth_views.PasswordResetCompleteView.as_view(template_name='pass_reset/password_reset_complete.html'),
         name="password_reset_complete"),
+
+    path('', home),
 ]
