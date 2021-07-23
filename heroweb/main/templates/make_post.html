@@ -7,19 +7,14 @@
             <!-- This is needed for encryption. Dont worry about it, Django handles it -->
             {% csrf_token %}
 
-            <fieldset>
-                <legend>Create an account</legend>
+            <fieldset class='mb-3'>
+                <legend>Make a post</legend>
                 <!-- Insert the form -->
                 {{ form|crispy }}
             </fieldset>
             <div>
-                <button type="submit">Create account</button>
+                <button type="submit" class='btn btn-success'>Create post</button>
             </div>
         </form>
-        <div>
-            <small>
-                Already have an account? <a href="{% url 'login' %}">Login</a>
-            </small>
-        </div>
     </div>
 {% endblock %}

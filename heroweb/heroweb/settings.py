@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Static files (CSS, JavaScript, Images)

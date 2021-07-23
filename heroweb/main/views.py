@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from main.models import Post, Tab
+from main.forms import PostCreationForm
 
 # Create your views here.
 def home(request):
@@ -58,3 +60,23 @@ def post(request, id):
         'views':views
     }
     return render(request, 'post.html', content)
+
+def make_post(request):
+    if request.method == "POST":
+        #Access the form through the request object
+        form = PostCreationForm(request.POST)
+        #If valid, save
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            #Tell the user that the registration was succesful. This will be functional later on
+            messages.success(request, f"Post created succesfully")
+            #Redirect to the login page
+            return redirect("home")
+    
+    #If not, we only show the form to the user
+    else:
+        form = PostCreationForm()
+
+    return render(request, 'make_post.html', {'form':form})

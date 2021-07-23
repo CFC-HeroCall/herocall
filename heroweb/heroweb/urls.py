@@ -18,7 +18,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from users.views import register, mock_home, profile
-from main.views import home, explore, post
+from main.views import home, explore, post, make_post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +29,8 @@ urlpatterns = [
     # The view for any post. It accepts an argument in the url: the post id
     # This allows to show the specific post that the user clicked on
     path('post/<int:id>/', post, name="post"),
+
+    path('make_post/', make_post, name="make_post"),
 
 
     #This is just a mock version of a home page for me to test the redirection functionalities
