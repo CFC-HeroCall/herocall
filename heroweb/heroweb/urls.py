@@ -23,7 +23,11 @@ from main.views import home, explore, post
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
+    #The url for the example to show
     path('explore/', explore, name="explore"),
+
+    # The view for any post. It accepts an argument in the url: the post id
+    # This allows to show the specific post that the user clicked on
     path('post/<int:id>/', post, name="post"),
 
 
