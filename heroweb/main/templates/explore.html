@@ -2,8 +2,36 @@
 {% block content %}
 
 <div class='container'>
-    <h1>EXPLORING</h1>
-    <p>Ella is not cool at all. Hallelujah :)</p>
+    <div class='row border px-4'>
+    <h1 class='text-center m-4'>{{post.title}}</h1>
+        <hr>
+        <p>{{post.text}}</p>
+        <p>Author: {{post.author}}</p>
+        <nav class='mt-3'>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                {% for tab in tabs %}
+                    {% if forloop.first %}
+                        <button class="nav-link active" id="nav-{{tab.title|cut:' ' }}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{tab.title|cut:' ' }}" type="button" role="tab" aria-controls="nav-{{tab.title|cut:' ' }}" aria-selected="true">{{tab.title}}</button>
+                    {% else %}
+                        <button class="nav-link" id="nav-{{tab.title|cut:' '}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{tab.title|cut:' ' }}" type="button" role="tab" aria-controls="nav-{{tab.title|cut:' ' }}" aria-selected="false">{{tab.title}}</button>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </nav>
+        <div class="tab-content py-4 px-5" id="nav-tabContent">
+            {% for tab in tabs %}
+                {% if forloop.first %}
+                    <div class="tab-pane fade show active" id="nav-{{tab.title|cut:' ' }}" role="tabpanel" aria-labelledby="nav-{{tab.title|cut:' '}}-tab">
+                        {{tab.text}}
+                    </div>
+                {% else %}
+                    <div class="tab-pane fade" id="nav-{{tab.title|cut:' ' }}" role="tabpanel" aria-labelledby="nav-{{tab.title|cut:' ' }}-tab">
+                        {{tab.text}}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>          
+    </div>
 </div>
 
 
