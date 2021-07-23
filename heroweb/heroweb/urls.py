@@ -18,13 +18,16 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from users.views import register, mock_home, profile
-from main.views import home
+from main.views import home, explore
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name="home"),
+    path('explore/', explore, name="explore"),
+
+
 
     #This is just a mock version of a home page for me to test the redirection functionalities
-    path('mock_home/', mock_home, name="home"),
     path('create_account/', register, name="create_account"),
 
     #That is an automatic view done by Django. I'm only defining the file that it has to redirect to
@@ -52,6 +55,4 @@ urlpatterns = [
     path('password_reset_complete/',
         auth_views.PasswordResetCompleteView.as_view(template_name='pass_reset/password_reset_complete.html'),
         name="password_reset_complete"),
-
-    path('', home),
 ]

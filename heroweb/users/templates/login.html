@@ -1,22 +1,28 @@
-<form method="POST">
-    {% csrf_token %}
-    <fieldset>
-        <legend>Log in</legend>
-        {{ form }}
-    </fieldset>
+{% extends 'base.html' %}
+{% block content %}
+<div class='container brand-text'>
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <legend>Log in</legend>
+            {{ form }}
+        </fieldset>
+        <div>
+            <button type="submit">Log in</button>
+        </div>
+    </form>
     <div>
-        <button type="submit">Log in</button>
-    </div>
-</form>
-<div>
-    <div>
-        <smal>
-            Need an account? <a href="{% url 'create_account' %}">Sign up</a>
-        </small>
-    </div>
-    <div>
-        <small>
-            Forgot# your password? <a href="{% url 'password_reset' %}">Reset it</a>
-        </small>
+        <div>
+            <smal>
+                Need an account? <a href="{% url 'create_account' %}">Sign up</a>
+            </small>
+        </div>
+        <div>
+            <small>
+                Forgot# your password? <a href="{% url 'password_reset' %}">Reset it</a>
+            </small>
+        </div>
     </div>
 </div>
+
+{% endblock %}

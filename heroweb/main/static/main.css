@@ -1,0 +1,20 @@
+html {
+    overflow-x: hidden; 
+  }
+  
+body {
+    color: #5a5a5a;
+    padding-top: 50px;
+    background-color: #2B2B71; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #212529 , #2B2B71);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+    .brand-text {
+        color:rgb(192, 192, 192);
+    }
+    .footer {
+        background-color: #212529;
+        position: sticky;
+        top: 100%;
+      }
