@@ -18,3 +18,8 @@ body {
         position: sticky;
         top: 100%;
       }
+    
+    .reply-button {
+        width: auto;
+        height: 50%;
+    }

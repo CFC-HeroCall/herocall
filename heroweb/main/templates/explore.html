@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-
 <div class='container'>
     <div class='row border px-4'>
-    <h1 class='text-center m-4'>{{post.title}}</h1>
+        <h1 class='text-center m-4'>{{post.title}}</h1>
         <hr>
         <p>{{post.text}}</p>
         <p>Author: {{post.author}}</p>
@@ -30,7 +29,52 @@
                     </div>
                 {% endif %}
             {% endfor %}
-        </div>          
+        </div>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner mx-5">
+            {% for view in views %}
+                {% if forloop.first %}
+                    <div class="carousel-item active">
+                        <div class='row mt-3 px-4'>
+                            {% for reply in view %}
+                                <div class="card mx-1" style="width: 18rem;">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{reply.title}}</h5>
+                                    <hr>
+                                    <p class="card-text">{{reply.text}}</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="carousel-item">
+                        <div class='row mt-3 px-4'>
+                            {% for reply in view %}
+                                <div class="card mx-1" style="width: 18rem;">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{reply.title}}</h5>
+                                    <hr>
+                                    <p class="card-text">{{reply.text}}</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev bg-dark rounded reply-button mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next bg-dark rounded reply-button mt-5"  type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
 
