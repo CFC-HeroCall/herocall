@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class='container'>
+    <div class='row border px-4'>
+        <h1 class='text-center m-4'>{{post.title}}</h1>
+        <hr>
+        <p>{{post.text}}</p>
+        <p>Author: {{post.author}}</p>
+        <nav class='mt-3'>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                {% for tab in tabs %}
+                    {% if forloop.first %}
+                        <button class="nav-link active" id="nav-{{tab.title|cut:' ' }}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{tab.title|cut:' ' }}" type="button" role="tab" aria-controls="nav-{{tab.title|cut:' ' }}" aria-selected="true">{{tab.title}}</button>
+                    {% else %}
+                        <button class="nav-link" id="nav-{{tab.title|cut:' '}}-tab" data-bs-toggle="tab" data-bs-target="#nav-{{tab.title|cut:' ' }}" type="button" role="tab" aria-controls="nav-{{tab.title|cut:' ' }}" aria-selected="false">{{tab.title}}</button>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </nav>
+        <div class="tab-content py-4 px-5" id="nav-tabContent">
+            {% for tab in tabs %}
+                {% if forloop.first %}
+                    <div class="tab-pane fade show active" id="nav-{{tab.title|cut:' ' }}" role="tabpanel" aria-labelledby="nav-{{tab.title|cut:' '}}-tab">
+                        {{tab.text}}
+                        <div class='mb-3 mt-5 fs-2'>Replies</div>
+                        <hr>
+                        <div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide">
+                            <div class="carousel-inner mx-5">
+                                {% for view in views %}
+                                    {% if forloop.first %}
+                                        <div class="carousel-item active">
+                                            <div class='row mt-3 px-4'>
+                                                {% for reply in view %}
+                                                    {% if tab.id == reply.reply_tab %}
+                                                        <div class="card m-1 post-preview" style="width: 18rem;">
+                                                            <a class='text-decoration-none' href="{% url 'post' id=reply.id %}">
+                                                                <div class="card-body">
+                                                                    <div class='row'>
+                                                                        <h5 class="card-title">{{reply.title}}</h5>
+                                                                        <small>{{reply.author}}</small> 
+                                                                    </div>
+                                                                    <hr>
+                                                                    <p class="card-text">{{reply.text}}</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="carousel-item active">
+                                            <div class='row mt-3 px-4'>
+                                                {% for reply in view %}
+                                                    {% if tab.id == reply.reply_tab %}
+                                                        <div class="card m-1 post-preview" style="width: 18rem;">
+                                                            <a class='text-decoration-none' href="{% url 'post' id=reply.id %}">
+                                                                <div class="card-body">
+                                                                    <div class='row'>
+                                                                        <h5 class="card-title">{{reply.title}}</h5>
+                                                                        <small>{{reply.author}}</small> 
+                                                                    </div>
+                                                                    <hr>
+                                                                    <p class="card-text">{{reply.text}}</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev bg-dark rounded reply-button mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next bg-dark rounded reply-button mt-5"  type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="tab-pane fade" id="nav-{{tab.title|cut:' ' }}" role="tabpanel" aria-labelledby="nav-{{tab.title|cut:' ' }}-tab">
+                        {{tab.text}}
+                        <div class='mb-3 mt-5 fs-2'>Replies</div>
+                        <hr>
+                        <div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide">
+                            <div class="carousel-inner mx-5">
+                                {% for view in views %}
+                                    {% if forloop.first %}
+                                        <div class="carousel-item active">
+                                            <div class='row mt-3 px-4'>
+                                                {% for reply in view %}
+                                                    {% if tab.id == reply.reply_tab %}
+                                                        <div class="card m-1 post-preview" style="width: 18rem;">
+                                                            <a class='text-decoration-none' href="{% url 'post' id=reply.id %}">
+                                                                <div class="card-body">
+                                                                    <div class='row'>
+                                                                        <h5 class="card-title">{{reply.title}}</h5>
+                                                                        <small>{{reply.author}}</small> 
+                                                                    </div>
+                                                                    <hr>
+                                                                    <p class="card-text">{{reply.text}}</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <div class="carousel-item active">
+                                            <div class='row mt-3 px-4'>
+                                                {% for reply in view %}
+                                                    {% if tab.id == reply.reply_tab %}
+                                                        <div class="card m-1 post-preview" style="width: 18rem;">
+                                                            <a class='text-decoration-none' href="{% url 'post' id=reply.id %}">
+                                                                <div class="card-body">
+                                                                    <div class='row'>
+                                                                        <h5 class="card-title">{{reply.title}}</h5>
+                                                                        <small>{{reply.author}}</small> 
+                                                                    </div>
+                                                                    <hr>
+                                                                    <p class="card-text">{{reply.text}}</p>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <button class="carousel-control-prev bg-dark rounded reply-button mt-5" type="button" data-bs-target="#carouselExampleControls-{{tab.title|cut:' ' }}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next bg-dark rounded reply-button mt-5"  type="button" data-bs-target="#carouselExampleControls-{{tab.title|cut:' ' }}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

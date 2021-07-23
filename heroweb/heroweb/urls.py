@@ -18,13 +18,13 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from users.views import register, mock_home, profile
-from main.views import home, explore
+from main.views import home, explore, post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
     path('explore/', explore, name="explore"),
-
+    path('post/<int:id>/', post, name="post"),
 
 
     #This is just a mock version of a home page for me to test the redirection functionalities
