@@ -30,22 +30,62 @@
                                     {% if forloop.first %}
                                         <div class="carousel-item active">
                                             <div class='row mt-3 px-4'>
-                                                {% for reply in view %}
-                                                    {% if tab.id == reply.reply_tab %}
-                                                        <div class="card m-1 post-preview" style="width: 18rem;">
-                                                            <a class='text-decoration-none' href="{% url 'post' id=reply.id %}">
-                                                                <div class="card-body">
-                                                                    <div class='row'>
-                                                                        <h5 class="card-title">{{reply.title}}</h5>
-                                                                        <small>{{reply.author}}</small> 
+                                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                    {% for reply in view %}
+                                                        {% if tab.id == reply.reply_tab %}
+                                                        {% comment %}
+                                                            <!-- <div class="card m-1 post-preview" style="width: 18rem;">
+
+                                                                    <div class="card-body">
+                                                                        <div class='row'>
+                                                                            <h5 class="card-title">{{reply.title}}</h5>
+                                                                            <small>{{reply.author}}</small> 
+                                                                        </div>
+                                                                        <hr>
+                                                                        <p class="card-text">{{reply.text}}</p>
                                                                     </div>
-                                                                    <hr>
-                                                                    <p class="card-text">{{reply.text}}</p>
+                                                                
+                                                            </div> -->
+                                                        {% endcomment %}
+                                                            <li class="nav-item" role="presentation">
+                                                                <div class="card m-1 post-preview" id="pills-{{reply.title|cut:' '}}-tab" style="width: 18rem;" data-bs-toggle="pill" data-bs-target="#pills-{{reply.title|cut:' '}}" role='tab' aria-controls="pills-{{reply.title|cut:' '}}" aria-selected="false">
+                                                                    <div class="card-body">
+                                                                        <div class='row'>
+                                                                            <h5 class="card-title">{{reply.title}}</h5>
+                                                                            <small>{{reply.author}}</small> 
+                                                                        </div>
+                                                                        <hr>
+                                                                        <p class="card-text">{{reply.text}}</p>
+                                                                    </div>
                                                                 </div>
-                                                            </a>
-                                                        </div>
-                                                    {% endif %}
-                                                {% endfor %}
+                                                            </li>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </ul>
+                                                <div class="tab-content" id="pills-tabContent">
+                                                    {% for reply in view %}
+                                                        {% if tab.id == reply.reply_tab %}
+                                                            <div class="tab-pane fade" id="pills-{{reply.title|cut:' '}}" role="tabpanel" aria-labelledby="pills-{{reply.title|cut:' '}}-tab">
+                                                                {% for post_r in posts %}
+                                                                    {% if post_r.reply_post == reply.id %}
+                                                                        <div class="card m-1 post-preview" style="width: 18rem;">
+                                                                            <div class="card-body">
+                                                                                <div class='row'>
+                                                                                    <h5 class="card-title">{{post_r.title}}</h5>
+                                                                                    <small>{{post_r.author}}</small> 
+                                                                                </div>
+                                                                                <hr>
+                                                                                <p class="card-text">{{post_r.text}}</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                            </div>
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+
+
                                             </div>
                                         </div>
                                     {% else %}

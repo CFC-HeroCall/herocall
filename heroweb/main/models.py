@@ -12,8 +12,8 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.PROTECT)
 
     # A post doesnt have to be a reply, so these two fields can be null
-    reply_post = models.IntegerField(null=True)
-    reply_tab = models.IntegerField(null=True)
+    reply_post = models.IntegerField(null=True, blank=True)
+    reply_tab = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f'{self.author.username} --> {self.title}'

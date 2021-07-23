@@ -39,6 +39,7 @@ def post(request, id):
     #Same as explore, but getting the id of the post that the user is looking at.
     # This id is obtained from the url (the id variable)
     post = Post.objects.all().get(id=id)
+    posts = Post.objects.all()
     replies_raw = Post.objects.all().filter(reply_post=post.id)
     views = []
     i = 0
@@ -52,6 +53,7 @@ def post(request, id):
     tabs = Tab.objects.all().filter(post=post)
     content = {
         'post':post,
+        'posts':posts,
         'tabs':tabs,
         'views':views
     }
