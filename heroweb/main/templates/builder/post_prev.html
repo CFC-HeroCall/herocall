@@ -1,4 +1,4 @@
-<div class="card m-1 post-preview" style="width: 18rem;">
+<div class="card m-1 post-preview" style="width: 18rem;" onclick="focused(this)">
     <div class="card-body">
         <div class='row'>
             <h5 class="card-title">{{post.title}}</h5>
@@ -9,5 +9,8 @@
         <div class='d-flex justify-content-end'>
             <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light'>Go</a>
         </div>
+    </div>
+    <div id='clicked' style='display: none;'>
+        <span class="d-flex justify-content-center material-icons">expand_more</span>
     </div>
 </div>
