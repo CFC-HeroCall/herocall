@@ -21,7 +21,7 @@ body {
     
     .reply-button {
         width: auto;
-        height: 7.5em;
+        height: 50%;
     }
 
     .post-preview {
@@ -31,7 +31,6 @@ body {
     .post-preview a {
         color:#5a5a5a
     }
-
 
     .post-preview:hover {
         background-color: #a0a0a0;
