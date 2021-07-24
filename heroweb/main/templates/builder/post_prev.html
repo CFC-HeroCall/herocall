@@ -6,5 +6,8 @@
         </div>
         <hr>
         <p class="card-text">{{post.text}}</p>
+        <div class='d-flex justify-content-end'>
+            <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light'>Go</a>
+        </div>
     </div>
 </div>
