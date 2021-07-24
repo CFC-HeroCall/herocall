@@ -1,0 +1,11 @@
+<div class='row mt-3 px-4'>
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        {% for reply in view %}
+            <li class="nav-item" role="presentation">
+                <div id="pills-{{reply.title|cut:' '}}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{reply.title|cut:' '}}" type="button" role="tab" aria-controls="pills-{{reply.title|cut:' '}}" aria-selected="true">
+                    {% include 'builder/post_prev.html' with post=reply %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
