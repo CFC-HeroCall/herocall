@@ -33,7 +33,7 @@
                             <div class="carousel-item active">
                                 <div class='row mt-3 px-4'>
                                     {% for rreply in view %}
-                                        {% include 'builder/post_prev.html' with post=rreply %}
+                                        {% include 'builder/post_prev.html' with post=rreply selected='focused' %}
                                     {% endfor %}
                                 </div>
                             </div>

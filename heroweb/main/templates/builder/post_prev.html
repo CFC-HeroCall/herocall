@@ -1,4 +1,4 @@
-<div class="card m-1 post-preview" style="width: 18rem;" onclick="focused(this)">
+<div class="card m-1 post-preview" style="width: 18rem;" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
     <div class="card-body">
         <div class='row'>
             <h5 class="card-title">{{post.title}}</h5>
