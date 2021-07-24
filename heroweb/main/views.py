@@ -40,24 +40,16 @@ def explore(request):
 def post(request, id):
     #Same as explore, but getting the id of the post that the user is looking at.
     # This id is obtained from the url (the id variable)
-    post = Post.objects.all().get(id=id)
+    main_post = Post.objects.all().get(id=id)
     posts = Post.objects.all()
-    replies_raw = Post.objects.all().filter(reply_post=post.id)
-    views = []
-    i = 0
-    for reply in replies_raw:
-        if i % 2 == 0:
-            views.append([reply])
-        else:
-            views[len(views)-1].append(reply)
-        i += 1
+    replies_raw = Post.objects.all().filter(reply_post=main_post.id)
 
-    tabs = Tab.objects.all().filter(post=post)
+    tabs = Tab.objects.all().filter(post=main_post)
     content = {
-        'post':post,
+        'main_post':main_post,
         'posts':posts,
         'tabs':tabs,
-        'views':views
+        'replies_raw':replies_raw
     }
     return render(request, 'post.html', content)
 

@@ -10,18 +10,9 @@
     </div>
     <div class='d-flex row mt-5 justify-content-center'>
         {% for post in posts %}
-            <div class="card m-1 post-preview" style="width: 18rem;">
-                <a class='text-decoration-none' href="{% url 'post' id=post.id %}">
-                    <div class="card-body">
-                        <div class='row'>
-                            <h5 class="card-title">{{post.title}}</h5>
-                            <small>{{post.author}}</small> 
-                        </div>
-                        <hr>
-                        <p class="card-text">{{post.text}}</p>
-                    </div>
-                </a>
-            </div>
+            {% include 'builder/post_prev.html' %}
+                {% block ta %}
+                {% endblock ta %}
         {% endfor %}
     </div>
 </div> 

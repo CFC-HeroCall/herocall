@@ -1,0 +1,75 @@
+{% load hero_comments %}
+<div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide" data-bs-interval=false>
+    <div class="carousel-inner mx-5">
+        {% for view in replies_raw|org_replies:tab.id %}
+            {% if forloop.first %}
+                <div class="carousel-item active">
+                    <div class='row mt-3 px-4'>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            {% for reply in view %}
+                                <li class="nav-item" role="presentation">
+                                    <div id="pills-{{reply.title|cut:' '}}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{reply.title|cut:' '}}" type="button" role="tab" aria-controls="pills-{{reply.title|cut:' '}}" aria-selected="true">
+                                        {% include 'builder/post_prev.html' with post=reply %}
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% else %}
+                <div class="carousel-item">
+                    <div class='row mt-3 px-4'>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            {% for reply in view %}
+                                <li class="nav-item" role="presentation">
+                                    <div id="pills-{{reply.title|cut:' '}}-tab" data-bs-toggle="pill" data-bs-target="#pills-{{reply.title|cut:' '}}" type="button" role="tab" aria-controls="pills-{{reply.title|cut:' '}}" aria-selected="true">
+                                        {% include 'builder/post_prev.html' with post=reply %}
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <button class="carousel-control-prev bg-dark rounded reply-button mt-5" type="button" data-bs-target="#carouselExampleControls-{{tab.title|cut:' ' }}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next bg-dark rounded reply-button mt-5"  type="button" data-bs-target="#carouselExampleControls-{{tab.title|cut:' ' }}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="tab-content" id="pills-tabContent">
+    {% for view in replies_raw|org_replies:tab.id %}
+        {% for reply in view %}
+            <div class="tab-pane fade" id="pills-{{reply.title|cut:' '}}" role="tabpanel" aria-labelledby="pills-{{reply.title|cut:' '}}-tab">
+                <div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide" data-bs-interval=false>
+                    <div class="carousel-inner mx-5">
+                        {% for view in posts|get_replies:reply.id %}
+                            <div class="carousel-item active">
+                                <div class='row mt-3 px-4'>
+                                    {% for rreply in view %}
+                                        {% include 'builder/post_prev.html' with post=rreply %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <button class="carousel-control-prev bg-dark rounded reply-button mt-5" type="button" data-bs-target="#carouselExampleControls-{{reply.title|cut:' ' }}" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next bg-dark rounded reply-button mt-5"  type="button" data-bs-target="#carouselExampleControls-{{reply.title|cut:' ' }}" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>
