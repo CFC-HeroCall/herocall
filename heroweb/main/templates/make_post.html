@@ -3,17 +3,19 @@
 {% block content %}
 <div class='container brand-text'>
     <div>
-        <form method="POST">
-            <!-- This is needed for encryption. Dont worry about it, Django handles it -->
-            {% csrf_token %}
+        <form method="POST" class='d-flex justify-content-center'>
+            <div class='row create-post'>
+                <!-- This is needed for encryption. Dont worry about it, Django handles it -->
+                {% csrf_token %}
 
-            <fieldset class='mb-3'>
-                <legend>Make a post</legend>
-                <!-- Insert the form -->
-                {{ form|crispy }}
-            </fieldset>
-            <div>
-                <button type="submit" class='btn btn-success'>Create post</button>
+                <fieldset class='mb-3'>
+                    <legend>Make a post</legend>
+                    <!-- Insert the form -->
+                    {{ form|crispy }}
+                </fieldset>
+                <div>
+                    <button type="submit" class='btn btn-success'>Create post</button>
+                </div>
             </div>
         </form>
     </div>
