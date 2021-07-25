@@ -13,8 +13,9 @@
                     <legend>Make a post</legend>
                     <!-- Insert the form -->
                     {{ form|crispy }}
-                    <div id='tabs'>
-
+                    <div id='tabs' name='tabs'>
+                        <input id='indicator' style='display: none;' name='indicator' value=0>
+                        {% include "builder/tab_form.html" %}
                     </div>
                     <button onclick="add_tab(this)" type='button' class='btn btn-outline-secondary mt-4'>Add tab</button>
                 </fieldset>

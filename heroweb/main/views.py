@@ -38,7 +38,7 @@ def explore(request):
     return render(request, 'explore.html', content)
 
 def post(request, id):
-    #Same as explore, but getting the id of the post that the user is looking at.
+    # Same as explore, but getting the id of the post that the user is looking at.
     # This id is obtained from the url (the id variable)
     main_post = Post.objects.all().get(id=id)
     posts = Post.objects.all()
@@ -57,11 +57,31 @@ def make_post(request):
     if request.method == "POST":
         #Access the form through the request object
         form = PostCreationForm(request.POST)
+        ntabs = int(request.POST['indicator'])
+        tabs = []
+        for tab in range(ntabs):
+            print(f'Tab {tab}:')
+            if tab == 0:
+                tab = ''
+            title = request.POST[f'tab_title{tab}']
+            content = request.POST[f'tab_text{tab}']
+            print(title)
+            print(content)
+            tabs.append({
+                'title':title,
+                'content':content
+            })
+
+
         #If valid, save
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
             post.save()
+            for tab in tabs:
+                new_tab = Tab(title=tab['title'], text=tab['content'], post=post)
+                new_tab.save()
+
             #Tell the user that the registration was succesful. This will be functional later on
             messages.success(request, f"Post created succesfully")
             #Redirect to the login page

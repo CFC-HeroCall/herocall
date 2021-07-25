@@ -1,17 +1,17 @@
 function add_tab(element) {
-    var div = document.createElement("div")
-    div.id = 'tab'
-    document.getElementById('tabs').appendChild(div)
+    var iter = document.getElementsByClassName('tab_form').length;
+    var tab = document.getElementById('tab')
+    document.getElementById('indicator').value = parseInt(document.getElementById('indicator').value) + 1;
 
-    var lab = document.createElement("label")
-    lab.for = 'new_tab'
-    lab.innerHTML = 'Title'
-    var title = document.createElement("input")
-    title.classList.add("mb-3")
-    lab.classList.add("mt-3")
-    title.id = 'new_tab'
-    document.getElementById("tab").appendChild(lab)
-    document.getElementById("tab").appendChild(document.createElement("br"))
-    document.getElementById("tab").appendChild(title)
-    console.log('works')
+    if (tab.style.display == 'none') {
+        tab.style.display = 'block'
+    } else {
+        var cln = tab.cloneNode(true);
+        cln.id = 'tab' + iter;
+        cln.childNodes[9].value = '';
+        cln.childNodes[9].name = 'tab_title' + iter;
+        cln.childNodes[15].value = '';
+        cln.childNodes[15].name = 'tab_text' + iter;
+        document.getElementById("tabs").appendChild(cln)
+    }
 }
