@@ -25,3 +25,14 @@ function delete_tab(element) {
     //     element.parentElement.parentElement.parentElement.remove()
     // }
 }
+
+function test(element) {
+    selected = element.value
+    found = document.getElementById(selected)
+    options = document.getElementsByClassName("option_tab");
+    console.log(options)
+    for (let i=0; i < options.length; i++) {
+        options[i].style = 'display: none;'
+    }
+    found.style.display = 'block'
+}

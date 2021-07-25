@@ -18,11 +18,13 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from users.views import register, mock_home, profile
-from main.views import home, explore, post, make_post
+from main.views import home, explore, post, make_post, test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
+    # This is a url to make any test needed
+    path('test/', test, name="test"),
     #The url for the example to show
     path('explore/', explore, name="explore"),
 

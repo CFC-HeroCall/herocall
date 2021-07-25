@@ -12,6 +12,9 @@ def home(request):
     }
     return render(request, 'index.html', content)
 
+def test(request):
+    return render(request, 'test.html')
+
 def explore(request):
     # Access the first post for showing purposes
     post = Post.objects.all()[0]

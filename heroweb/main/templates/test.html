@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class='container'>
+    <select onchange="test(this)">
+        <option value="a">asd</option>
+        <option value="as">assd</option>
+    </select>
+    <div id='a' class='option_tab' style='display:none;'>
+        This is the content of a
+    </div>
+    <div id='as' class='option_tab' style='display:none;'>
+        This is the content of b
+    </div>
+</div>
+
+<script src="{% static 'js/make_post.js' %}" defer></script>
+
+{% endblock content %}
