@@ -1,3 +1,4 @@
+{% load hero_comments %}
 <div class="card m-1 post-preview" style="width: 18rem;" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
     <div class="card-body">
         <div class='row'>
@@ -10,7 +11,12 @@
             <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light'>Go</a>
         </div>
     </div>
-    <div id='clicked' style='display: none;'>
-        <span class="d-flex justify-content-center material-icons">expand_more</span>
+    <div id='clicked' class='justify-content-center mb-3 mx-2' style='display: none;'>
+        <select class='form-select'>
+            {% get_tabs post %}
+        </select>
+    </div>
+    <div id='asd' style='display: block;'>
+        
     </div>
 </div>

@@ -4,7 +4,7 @@ function add_tab(element) {
     document.getElementById('indicator').value = parseInt(document.getElementById('indicator').value) + 1;
 
     if (tab.style.display == 'none') {
-        tab.style.display = 'block'
+        tab.style.display = 'flex'
     } else {
         var cln = tab.cloneNode(true);
         cln.id = 'tab' + iter;
@@ -14,4 +14,14 @@ function add_tab(element) {
         cln.childNodes[15].name = 'tab_text' + iter;
         document.getElementById("tabs").appendChild(cln)
     }
+}
+
+function delete_tab(element) {
+    // document.getElementById('indicator').value = parseInt(document.getElementById('indicator').value) - 1;
+    // var iter = document.getElementsByClassName('tab_form').length;
+    // if (iter == 1) {
+    //     tab.style.display = 'none'
+    // } else {
+    //     element.parentElement.parentElement.parentElement.remove()
+    // }
 }

@@ -15,6 +15,9 @@
                     {{ form|crispy }}
                     <div id='tabs' name='tabs'>
                         <input id='indicator' style='display: none;' name='indicator' value=0>
+                        {% if reply %}
+                            <input type="text" name="reply" id="reply" value={{reply}} class='d-none'>
+                        {% endif %}
                         {% include "builder/tab_form.html" %}
                     </div>
                     <button onclick="add_tab(this)" type='button' class='btn btn-outline-secondary mt-4'>Add tab</button>

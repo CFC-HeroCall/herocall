@@ -1,7 +1,7 @@
 {% load hero_comments %}
 <div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide" data-bs-interval=false>
     <div class="carousel-inner mx-5">
-        {% for view in replies_raw|org_replies:tab.id %}
+        {% for view in posts|org_replies:tab.id %}
             {% if forloop.first %}
                 <div class="carousel-item active">
                     {% include 'builder/item.html' %}
@@ -24,12 +24,12 @@
 </div>
 
 <div class="tab-content" id="pills-tabContent">
-    {% for view in replies_raw|org_replies:tab.id %}
+    {% for view in posts|org_replies:tab.id %}
         {% for reply in view %}
             <div class="tab-pane fade" id="pills-{{reply.title|cut:' '}}" role="tabpanel" aria-labelledby="pills-{{reply.title|cut:' '}}-tab">
                 <div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide" data-bs-interval=false>
                     <div class="carousel-inner mx-5">
-                        {% for view in posts|get_replies:reply.id %}
+                        {% for view in posts|org_replies:tab.id %}
                             <div class="carousel-item active">
                                 <div class='row mt-3 px-4'>
                                     {% for rreply in view %}
@@ -48,7 +48,6 @@
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-
             </div>
         {% endfor %}
     {% endfor %}

@@ -12,8 +12,7 @@ class Post(models.Model):
     # The author is a model from the User models (It is a default from Django)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
 
-    # A post doesnt have to be a reply, so these two fields can be null
-    reply_post = models.IntegerField(null=True, blank=True)
+    # A post doesnt have to be a reply, so this field can be null
     reply_tab = models.IntegerField(null=True, blank=True)
 
     def __str__(self):

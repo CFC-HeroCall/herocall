@@ -6,7 +6,7 @@ from main.forms import PostCreationForm
 # Create your views here.
 def home(request):
     # Access the posts that aren't replies to another post
-    posts = Post.objects.all().filter(reply_post=None)
+    posts = Post.objects.all().filter(reply_tab=None)
     content = {
         'posts':posts,
     }
@@ -42,14 +42,12 @@ def post(request, id):
     # This id is obtained from the url (the id variable)
     main_post = Post.objects.all().get(id=id)
     posts = Post.objects.all()
-    replies_raw = Post.objects.all().filter(reply_post=main_post.id)
 
     tabs = Tab.objects.all().filter(post=main_post)
     content = {
         'main_post':main_post,
         'posts':posts,
         'tabs':tabs,
-        'replies_raw':replies_raw
     }
     return render(request, 'post.html', content)
 
@@ -58,6 +56,11 @@ def make_post(request):
         #Access the form through the request object
         form = PostCreationForm(request.POST)
         ntabs = int(request.POST['indicator'])
+        try:
+            reply_tab = request.POST['reply']
+        except:
+            reply_tab = None
+
         tabs = []
         for tab in range(ntabs):
             print(f'Tab {tab}:')
@@ -72,11 +75,11 @@ def make_post(request):
                 'content':content
             })
 
-
         #If valid, save
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
+            post.reply_tab = reply_tab
             post.save()
             for tab in tabs:
                 new_tab = Tab(title=tab['title'], text=tab['content'], post=post)
@@ -90,5 +93,18 @@ def make_post(request):
     #If not, we only show the form to the user
     else:
         form = PostCreationForm()
+        try:
+            reply = request.GET['reply']
+            contents = {
+                'form':form,
+                'reply':reply
+            }
+        except:
+            contents = {
+                'form':form,
+            }
 
-    return render(request, 'make_post.html', {'form':form})
+
+        
+
+    return render(request, 'make_post.html', contents)
