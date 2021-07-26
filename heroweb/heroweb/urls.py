@@ -18,7 +18,7 @@ from django.urls import path
 from django.contrib.auth import views as auth_views
 
 from users.views import register, mock_home, profile
-from main.views import home, explore, post, make_post, test
+from main.views import home, explore, post, make_post, test, delete_post
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
     path('test/', test, name="test"),
     #The url for the example to show
     path('explore/', explore, name="explore"),
+    path('delete_post/', delete_post, name="delete_post"),
 
     # The view for any post. It accepts an argument in the url: the post id
     # This allows to show the specific post that the user clicked on

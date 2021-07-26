@@ -19,9 +19,13 @@ def org_replies(replies, tab_id):
 
 @register.simple_tag
 def get_tabs(post):
-    response = ''
+    response = "<select class='form-select' onchange='select_tab(this)'><option selected>Select tab</options>"
     tabs = Tab.objects.all().filter(post=post)
-    for tab in tabs:
-        response += f'<option value="{tab.id}">{tab.title}</option>'
 
+    if len(tabs) == 0:
+        return ""
+
+    for tab in tabs:
+        response += f'<option value="rtab_{tab.id}">{tab.title}</option>'
+    response += "</select>"
     return format_html(response)

@@ -29,14 +29,16 @@
             <div class="tab-pane fade" id="pills-{{reply.title|cut:' '}}" role="tabpanel" aria-labelledby="pills-{{reply.title|cut:' '}}-tab">
                 <div id="carouselExampleControls-{{tab.title|cut:' ' }}" class="carousel slide" data-bs-interval=false>
                     <div class="carousel-inner mx-5">
-                        {% for view in posts|org_replies:tab.id %}
-                            <div class="carousel-item active">
-                                <div class='row mt-3 px-4'>
-                                    {% for rreply in view %}
-                                        {% include 'builder/post_prev.html' with post=rreply selected='focused' %}
-                                    {% endfor %}
+                        {% for tab_in in reply.tab_set.all %}
+                            {% for view in posts|org_replies:tab_in.id %}
+                                <div class="carousel-item active option_tab" id='rtab_{{tab_in.id}}' style="display: none;">
+                                    <div class='row mt-3 px-4'>
+                                        {% for rreply in view %}
+                                            {% include 'builder/post_prev.html' with post=rreply selected='focused' %}
+                                        {% endfor %}
+                                    </div>
                                 </div>
-                            </div>
+                            {% endfor %}
                         {% endfor %}
                     </div>
                     <button class="carousel-control-prev bg-dark rounded reply-button mt-5" type="button" data-bs-target="#carouselExampleControls-{{reply.title|cut:' ' }}" data-bs-slide="prev">

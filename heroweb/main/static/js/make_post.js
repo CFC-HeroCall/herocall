@@ -4,7 +4,7 @@ function add_tab(element) {
     document.getElementById('indicator').value = parseInt(document.getElementById('indicator').value) + 1;
 
     if (tab.style.display == 'none') {
-        tab.style.display = 'flex'
+        tab.style.display = 'block'
     } else {
         var cln = tab.cloneNode(true);
         cln.id = 'tab' + iter;

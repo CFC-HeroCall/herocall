@@ -54,6 +54,13 @@ def post(request, id):
     }
     return render(request, 'post.html', content)
 
+def delete_post(request):
+    main_post = Post.objects.all().get(id=request.GET['post_id'])
+    main_post.delete()
+
+    messages.success(request, f"Post deleted succesfully")
+    return redirect(request.GET['location'])
+
 def make_post(request):
     if request.method == "POST":
         #Access the form through the request object
@@ -91,7 +98,13 @@ def make_post(request):
             #Tell the user that the registration was succesful. This will be functional later on
             messages.success(request, f"Post created succesfully")
             #Redirect to the login page
-            return redirect("home")
+            if reply_tab != None:
+                return_post = Tab.objects.all().get(id=reply_tab).post.id
+                print(return_post)
+                print(Tab.objects.all().get(id=reply_tab))
+                return redirect("post", return_post)
+            else:
+                return redirect("home")
     
     #If not, we only show the form to the user
     else:

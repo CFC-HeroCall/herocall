@@ -10,13 +10,15 @@
         <div class='d-flex justify-content-end'>
             <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light'>Go</a>
         </div>
+        {% if user == post.author %}
+                <form action="{% url 'delete_post' %}" method="GET" class='d-flex mt-2 justify-content-end'>
+                    <input type="text" name="post_id" id="post_id" value='{{post.id}}' style='display: none;'>
+                    <input type="text" name="location" id="location" value='{{request.path}}' style='display: none;'>
+                    <button class='btn btn-danger' class='button' onclick="return confirm('Are you sure you want to delete this post?');">Delete</button>
+                </form>
+        {% endif %}
     </div>
     <div id='clicked' class='justify-content-center mb-3 mx-2' style='display: none;'>
-        <select class='form-select'>
-            {% get_tabs post %}
-        </select>
-    </div>
-    <div id='asd' style='display: block;'>
-        
+        {% get_tabs post %}
     </div>
 </div>
