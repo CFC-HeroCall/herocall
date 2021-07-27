@@ -12,8 +12,10 @@ body {
 }
 
     .go-btn {
+        border: none;
         background-color: rgb(86, 165, 175);
-        border-color: rgb(86, 165, 175);
+        /* flex-direction: row;
+        justify-content: end; */
     }
 
     .go-btn:hover {
@@ -65,3 +67,15 @@ body {
     .reply_button:hover {
         transition: 1s;
     }
+
+    /* .row{
+        height: 60px;
+    } */
+
+    .card-text{
+        height: 120px;
+    }
+
+    /* .card-body{
+        display: flex;
+    } */

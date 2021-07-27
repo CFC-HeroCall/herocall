@@ -7,8 +7,8 @@
         </div>
         <hr>
         <p class="card-text">{{post.text}}</p>
-        <div class='d-flex justify-content-end'>
-            <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light go-btn'>Go</a>
+        <div >
+            <a href="{% url 'post' id=post.id %}" class='go-btn btn btn-primary'>Go</a>
         </div>
         {% comment %}
             {% if user == post.author %}
