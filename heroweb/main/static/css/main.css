@@ -29,8 +29,10 @@ small{
     }
 
     .go-btn {
+        border: none;
         background-color: rgb(86, 165, 175);
-        border-color: rgb(86, 165, 175);
+        /* flex-direction: row;
+        justify-content: end; */
     }
 
     .go-btn:hover {
@@ -87,10 +89,4 @@ small{
         max-height: 120px;
         height: 120px;
         overflow: hidden;
-    }
-
-    .row-custom {
-        height: 60px;
-        overflow: hidden;
-
     }
