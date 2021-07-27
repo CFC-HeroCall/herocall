@@ -16,14 +16,14 @@ h1 {
     font-family: 'Staatliches', cursive;
     color: #3b3b3b;
 }
-/* h5{
+h5{
     height: 50px;
     overflow: hidden;
 }
 
 small{
-    height: 500px;
-} */
+    height: 10px;
+}
     .post {
         background-color: #ffffff;
     }
@@ -60,6 +60,8 @@ small{
 
     .post-preview {
         transition: 0.5s;
+        border-radius: 5%;
+        border:solid 2px black;
     }
 
     .post-preview a {
