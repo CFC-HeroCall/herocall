@@ -16,29 +16,9 @@ def test(request):
     return render(request, 'test.html')
 
 def explore(request):
-    # Access the first post for showing purposes
-    post = Post.objects.all()[0]
-    # Let's create a list of all the posts that have a as a reply the one that we are looking at
-    replies_raw = Post.objects.all().filter(reply_post=post.id)
-    views = []
-    i = 0
+    posts = Post.objects.all()
 
-    # For creates a view of 2 posts to show. So it is a list of lists of 2 posts each
-    for reply in replies_raw:
-        if i % 2 == 0:
-            views.append([reply])
-        else:
-            views[len(views)-1].append(reply)
-        i += 1
-
-    # Access all the tabs for that post
-    tabs = Tab.objects.all().filter(post=post)
-    content = {
-        'post':post,
-        'tabs':tabs,
-        'views':views
-    }
-    return render(request, 'explore.html', content)
+    return render(request, 'explore.html', {'posts':posts})
 
 def post(request, id):
     # Same as explore, but getting the id of the post that the user is looking at.

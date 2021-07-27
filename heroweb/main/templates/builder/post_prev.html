@@ -8,15 +8,17 @@
         <hr>
         <p class="card-text">{{post.text}}</p>
         <div class='d-flex justify-content-end'>
-            <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light'>Go</a>
+            <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light go-btn'>Go</a>
         </div>
-        {% if user == post.author %}
-                <form action="{% url 'delete_post' %}" method="GET" class='d-flex mt-2 justify-content-end'>
+        {% comment %}
+            {% if user == post.author %}
+                <form action="{% url 'delete_post' %}" method="GET" class='d-flex mt-2 justify-content-end end-post'>
                     <input type="text" name="post_id" id="post_id" value='{{post.id}}' style='display: none;'>
                     <input type="text" name="location" id="location" value='{{request.path}}' style='display: none;'>
                     <button class='btn btn-danger' class='button' onclick="return confirm('Are you sure you want to delete this post?');">Delete</button>
                 </form>
-        {% endif %}
+            {% endif %}
+        {% endcomment %}
     </div>
     <div id='clicked' class='justify-content-center mb-3 mx-2' style='display: none;'>
         {% get_tabs post %}
