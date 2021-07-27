@@ -10,7 +10,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-
     .post {
         background-color: #ffffff;
     }
@@ -80,6 +79,15 @@ body {
         height: 120px;
     }
 
-    /* .card-body{
+    /* .card-body:hover{
         display: flex;
     } */
+
+    h5{
+        height: 50px;
+        overflow: hidden;
+    }
+
+    small{
+        height: 10px;
+    }
