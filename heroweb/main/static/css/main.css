@@ -11,6 +11,19 @@ body {
     overflow-x: hidden;
 }
 
+h1 {
+    font-weight: 300;
+    font-family: 'Staatliches', cursive;
+    color: #3b3b3b;
+}
+/* h5{
+    height: 50px;
+    overflow: hidden;
+}
+
+small{
+    height: 500px;
+} */
     .post {
         background-color: #ffffff;
     }
@@ -68,4 +81,16 @@ body {
     }
     .reply_button:hover {
         transition: 1s;
+    }
+
+    .card-text {
+        max-height: 120px;
+        height: 120px;
+        overflow: hidden;
+    }
+
+    .row-custom {
+        height: 60px;
+        overflow: hidden;
+
     }

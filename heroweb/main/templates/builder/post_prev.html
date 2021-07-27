@@ -1,12 +1,18 @@
 {% load hero_comments %}
-<div class="card m-1 post-preview" style="width: 18rem;" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
+<div class="card m-1 post-preview " style="width: 18rem;" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
     <div class="card-body">
-        <div class='row'>
+        <div class='row-custom'>
             <h5 class="card-title">{{post.title}}</h5>
             <small>{{post.author}}</small> 
         </div>
         <hr>
-        <p class="card-text">{{post.text}}</p>
+        <p class="card-text">
+            {% if post.text|length > 100 %}
+                {{post.text}}
+            {% else %}
+                {{post.text}}
+            {% endif %}
+        </p>
         <div class='d-flex justify-content-end'>
             <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light go-btn'>Go</a>
         </div>
