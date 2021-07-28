@@ -15,22 +15,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="height: 70px; font-size: large;">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/" style="font-family: 'Staatliches', cursive;">HeroCall</a>
+                <a class="navbar-brand" href="/" style="font-family: 'PT Sans Caption', sans-serif;">HeroCall</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                        <li class="nav-item">
+                        <li class="nav-item mx-2">
                             <a class="nav-link" href="{% url 'make_post' %}">Make a post</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mx-2">
                             <a class="nav-link" href="{% url 'explore' %}">Explore</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#">What is HeroCall</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="#">Why should I help</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">

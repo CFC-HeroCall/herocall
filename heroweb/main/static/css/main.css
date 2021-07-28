@@ -3,36 +3,34 @@ html {
   }
   
 body {
-    color: #5a5a5a;
+    color: #e4e4e4;
     padding-top: 50px;
-    background-color: rgb(141, 233, 141);
-    font-family: 'Oxygen', sans-serif;
+    /* background-color: rgb(141, 233, 141); */
+    /* background-color: rgb(26, 75, 26); */
+    background-color: rgb(91, 126, 208);
+    background-image: linear-gradient(to right, rgb(91, 126, 208) , #A421B7);
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
 }
 
 h1 {
     font-weight: 300;
-    font-family: 'Staatliches', cursive;
-    color: #3b3b3b;
-}
-h5{
-    height: 50px;
-    overflow: hidden;
-}
-
-small{
-    height: 10px;
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #e4e4e4;
 }
     .post {
-        background-color: #ffffff;
+        background-color: #c4c4c4;
+        color: #616060;
+    }
+
+    .post-title {
+        color: inherit
     }
 
     .go-btn {
         border: none;
         background-color: rgb(86, 165, 175);
-        /* flex-direction: row;
-        justify-content: end; */
     }
 
     .go-btn:hover {
@@ -55,26 +53,27 @@ small{
     
     .reply-button {
         width: auto;
-        height: 50%;
+        height: 75%;
+        margin-top: 3.5%;
     }
 
     .post-preview {
         transition: 0.5s;
-        border-radius: 5%;
-        border:solid 2px black;
+        color: #616060;
+        background-color: #ffeaca;
     }
 
     .post-preview a {
-        color:#5a5a5a
+        color:#616060
     }
 
     .post-preview:hover {
-        background-color: #e4e4e4;
+        background-color: #fcd08e;
         transition: 0.5s;
     }
 
     .create-post {
-        color: #3b3b3b;
+        color: #e4e4e4;
         width: 70%;
     }
 
@@ -87,8 +86,11 @@ small{
         transition: 1s;
     }
 
-    .card-text {
-        max-height: 120px;
-        height: 120px;
-        overflow: hidden;
+    .card-title {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    button.active.nav-link {
+        background-color: inherit!important;
+        border-bottom: none;
     }
