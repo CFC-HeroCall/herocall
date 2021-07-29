@@ -9,7 +9,10 @@ body {
     /* background-color: rgb(26, 75, 26); */
     background-color: rgb(91, 126, 208);
     background-image: linear-gradient(to right, rgb(91, 126, 208) , #A421B7);
-    font-family: 'Poppins', sans-serif;
+    CSS rules to specify families
+
+    font-family: 'Archivo', sans-serif;
+
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -17,11 +20,15 @@ body {
 h1 {
     font-weight: 300;
     font-family: 'PT Sans Caption', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
     color: #e4e4e4;
 }
     .post {
-        background-color: #c4c4c4;
-        color: #616060;
+        background-color: #e0e0e0;
+        /* color: #616060; */
+        color: rgb(0, 0, 0);
     }
 
     .post-title {
@@ -60,7 +67,8 @@ h1 {
     .post-preview {
         transition: 0.5s;
         color: #616060;
-        background-color: #ffeaca;
+        /* background-color: rgb(243 226 170 / 100%); */
+        background-color: #eff8c8;
     }
 
     .post-preview a {
@@ -93,4 +101,16 @@ h1 {
     button.active.nav-link {
         background-color: inherit!important;
         border-bottom: none;
+    }
+
+    strong{
+        font-family: 'Staatliches', cursive;
+    }
+
+    .footer{
+        height: 80px;
+    }
+
+    .text-end{
+        display: inline;
     }

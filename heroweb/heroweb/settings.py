@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'main.apps.MainConfig',
     'crispy_forms',
+    # *star*
+    # 'main',
 ]
 
 MIDDLEWARE = [
