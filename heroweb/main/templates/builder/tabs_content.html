@@ -1,0 +1,10 @@
+{{tab.text}}
+<div class='mb-3 mt-5 fs-2'>Replies</div>
+<hr>
+{% include 'builder/horiz.html' %}
+
+<div class='d-flex justify-content-center'>
+    <form action="{% url 'make_post' %}" class='mt-3'>
+        <button type="submit" class="border-0 bg-transparent"><input type="text" name='reply' class='d-none' value="{{ tab.id }}"><span class="material-icons">add_circle</span></button>
+    </form>
+</div>

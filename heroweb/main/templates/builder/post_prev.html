@@ -1,0 +1,32 @@
+{% load hero_comments %}
+<div class="card m-2 p-3 post-preview" style="width: 18rem;" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
+    <div class="card-body">
+        <div class='row-custom'>
+            <h5 class="card-title my-0">{{post.title}}</h5>
+            <small>{{post.author}}</small> 
+        </div>
+        <hr>
+        <p class="card-text">
+            {% if post.text|length > 100 %}
+                {{post.text}}
+            {% else %}
+                {{post.text}}
+            {% endif %}
+        </p>
+        <div class='d-flex justify-content-end'>
+            <a href="{% url 'post' id=post.id %}" class='btn btn-primary text-light go-btn'>Go</a>
+        </div>
+        {% comment %}
+            {% if user == post.author %}
+                <form action="{% url 'delete_post' %}" method="GET" class='d-flex mt-2 justify-content-end end-post'>
+                    <input type="text" name="post_id" id="post_id" value='{{post.id}}' style='display: none;'>
+                    <input type="text" name="location" id="location" value='{{request.path}}' style='display: none;'>
+                    <button class='btn btn-danger' class='button' onclick="return confirm('Are you sure you want to delete this post?');">Delete</button>
+                </form>
+            {% endif %}
+        {% endcomment %}
+    </div>
+    <div id='clicked' class='justify-content-center mb-3 mx-2' style='display: none;'>
+        {% get_tabs post %}
+    </div>
+</div>

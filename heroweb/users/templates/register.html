@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class='container brand-text'>
+    <div>
+        <form method="POST">
+            <!-- This is needed for encryption. Dont worry about it, Django handles it -->
+            {% csrf_token %}
+
+            <fieldset>
+                <legend>Create an account</legend>
+                <!-- Insert the form -->
+                {{ form|crispy }}
+            </fieldset>
+            <div>
+                <button type="submit">Create account</button>
+            </div>
+        </form>
+        <div>
+            <small>
+                Already have an account? <a href="{% url 'login' %}">Login</a>
+            </small>
+        </div>
+    </div>
+{% endblock %}

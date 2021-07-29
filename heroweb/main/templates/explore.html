@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container-fluid justify-content-center">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value='Electronics'>
+            <button class="btn btn-outline-success" type="button">Search</button>
+        </form>
+    </div>
+</nav>
+<div class="text-center">
+    <small>Results about <i>Electronics</i></small>
+</div>
+
+<div class='d-flex row mt-5 justify-content-center'>
+    {% for post in posts %}
+        {% include 'builder/post_prev.html' %}
+    {% endfor %}
+</div>
+
+{% endblock content %}

@@ -1,0 +1,94 @@
+html {
+    overflow-x: hidden; 
+  }
+  
+body {
+    color: #5a5a5a;
+    padding-top: 50px;
+    background-color: rgb(141, 233, 141);
+    font-family: 'Oxygen', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: 300;
+    font-family: 'Staatliches', cursive;
+    color: #3b3b3b;
+}
+h5{
+    height: 50px;
+    overflow: hidden;
+}
+
+small{
+    height: 10px;
+}
+    .post {
+        background-color: #ffffff;
+    }
+
+    .go-btn {
+        border: none;
+        background-color: rgb(86, 165, 175);
+        /* flex-direction: row;
+        justify-content: end; */
+    }
+
+    .go-btn:hover {
+        background-color: rgb(54, 104, 110);
+        border-color: rgb(54, 104, 110);
+    }
+
+    .end-post {
+        align-self: flex-end;
+    }
+
+    .brand-text {
+        color:rgb(3, 3, 3);
+    }
+    .footer {
+        background-color: #212529;
+        position: sticky;
+        top: 100%;
+      }
+    
+    .reply-button {
+        width: auto;
+        height: 50%;
+    }
+
+    .post-preview {
+        transition: 0.5s;
+        border-radius: 5%;
+        border:solid 2px black;
+    }
+
+    .post-preview a {
+        color:#5a5a5a
+    }
+
+    .post-preview:hover {
+        background-color: #e4e4e4;
+        transition: 0.5s;
+    }
+
+    .create-post {
+        color: #3b3b3b;
+        width: 70%;
+    }
+
+    .reply_button {
+        color: inherit;
+        text-decoration:none;
+        transition: 1s;
+    }
+    .reply_button:hover {
+        transition: 1s;
+    }
+
+    .card-text {
+        max-height: 120px;
+        height: 120px;
+        overflow: hidden;
+    }
