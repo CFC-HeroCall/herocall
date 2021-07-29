@@ -109,6 +109,7 @@ h1 {
 
     .footer{
         height: 80px;
+        line-height: 0px;
     }
 
     .text-end{
