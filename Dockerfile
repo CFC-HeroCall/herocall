@@ -1,7 +1,7 @@
-FROM python:3.8.2-alpine
+FROM python:alpine
 ENV PYTHONUNBUFFERED 1
 
-COPY . requirements.txt
+COPY . /requirements.txt
 RUN pip3 install -r requirements.txt
 
 WORKDIR /heroweb
