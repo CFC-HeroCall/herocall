@@ -1,6 +1,6 @@
 # HeroCall
 
-A basic GitHub repository example for new [Call for Code](https://developer.ibm.com/callforcode/) projects and those that join the Call for Code with The Linux Foundation deployment initiative. Not all sections or files are required. You can make this as simple or as in-depth as you need. And don't forget to [register for Call for Code 2021](https://developer.ibm.com/callforcode/get-started/)!
+HeroCall is our solution to the challenge proposed by [Call for Code](https://developer.ibm.com/callforcode/). We aim to target *all* the  categories that the challenge propose. HeroCall is an ambitious and potentially very impactful project that will help a lot of people in the world.
 
 ## Contents
 
@@ -28,13 +28,9 @@ HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcome succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in more need are the one that less issues are going to overcome.
 
-### How can technology help?
-
-Schools and teachers can continue to engage with their students through virtual classrooms, and even create interactive spaces for classes. As parents face a new situation where they may need to homeschool their children, finding appropriate online resources is important as well.
-
 ### The idea
 
-It's imperative that learning and creating can continue when educational institutions have to shift the way they teach in times of crises, such as the COVID-19 pandemic. Providing a set of open source tools, backed by IBM Cloud and Watson Services, will enable educators to more easily make content available for their students.
+HeroCall aims to bridge this gap. It will connect people that has knowledge with people that needs this knowledge. Potentially, it is a means of solving any issue that anyone can have. It will be a web-based platform. The fact that it is a website makes it highly accesible. People only need a device with a browser and internet connection. This actually means that really basic hardware is needed, which helps bridge any technological gap. This was the most hardware-basic way the team came up in order to reach as many people as possible.
 
 ## Demo video
 
