@@ -1,7 +1,7 @@
 from django import template
 from main.models import Tab
 from django.utils.html import format_html
-from markdown import markdown
+# from markdown import markdown
 
 register = template.Library()
 
