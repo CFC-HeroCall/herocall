@@ -1,6 +1,6 @@
 # HeroCall
 
-HeroCall is our solution to the challenge proposed by [Call for Code](https://developer.ibm.com/callforcode/). We aim to target **all** the  categories that the challenge propose. HeroCall is an ambitious and potentially very impactful project that will help a lot of people in the world.
+HeroCall is our solution to the challenge proposed by [Call for Code](https://developer.ibm.com/callforcode/). We aim to target **all** the  categories that the challenge proposes. HeroCall is an ambitious and potentially very impactful project that will help a lot of people in the world.
 
 ## Contents
 
