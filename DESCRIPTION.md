@@ -1,5 +1,6 @@
 # HeroCall
 
+## Introduction
 Call for code is focused this year on solving the issues of people caused by global warming.
 There are 3 categories suggested: Clean water and sanitation, zero hunger and responsible
 production and green consumption.
@@ -10,6 +11,7 @@ problems? What if anyone in the world had access to these reports? What if anyon
 respond to the call for help? That is Heronet. A worldwide network of heroes that help people
 in need.
 
+## In depth
 HeroCall is not targeted for one of the categories. It is targeted to all of them at the same time.
 Our belief is that the knowledge that humanity has acquired through thousands of years of
 innovation should be available to anyone. What’s even better, people don’t need to spend
