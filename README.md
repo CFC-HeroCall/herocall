@@ -77,7 +77,7 @@ To get started using our code, clone the repository. Next, run the following com
   - `python -m venv venv`
   - `pip install -r requirements.txt`
 - Run the local server:
-  - `cd heroweb'
+  - `cd heroweb`
   - `python manage.py runserver`
 
 The server will be running at 127.0.0.1:8000
