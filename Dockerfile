@@ -1,12 +1,12 @@
-FROM python:3.8.2-alpine
+FROM python:3.9.4
 ENV PYTHONUNBUFFERED 1
 
-COPY . requirements.txt
+COPY . .
 RUN pip3 install -r requirements.txt
 
 WORKDIR /heroweb
 
-ENV PORT 3000
-EXPOSE 3000
+ENV PORT 8000
+EXPOSE 8000
 
-CMD ["python3", "manage.py", "start"]
+CMD ["python", "manage.py", "start"]

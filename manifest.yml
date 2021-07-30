@@ -4,7 +4,7 @@ applications:
   timeout: 180
   name: herocall
   buildpack: python_buildpack
-  command: gunicorn --env DJANGO_SETTINGS_MODULE=heroweb.settings heroweb.wsgi -b 0.0.0.0:$PORT
+  command: cd heroweb; gunicorn --env DJANGO_SETTINGS_MODULE=heroweb.settings heroweb.wsgi -b 0.0.0.0:$PORT
   disk_quota: 1G
   memory: 256MB
   domain: eu-gb.mybluemix.net
