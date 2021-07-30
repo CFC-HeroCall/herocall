@@ -21,13 +21,12 @@ _Read this in other languages: [English](README.md), [한국어](./docs/README.k
   - [Getting started](#getting-started)
   - [Live demo](#live-demo)
   - [Built with](#built-with)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
 ## Short description
+HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
@@ -60,7 +59,7 @@ It's imperative that learning and creating can continue when educational institu
 
 ## Project roadmap
 
-The project currently does the following things.
+The platform currently does the following things.
 
 - Feature 1
 - Feature 2
