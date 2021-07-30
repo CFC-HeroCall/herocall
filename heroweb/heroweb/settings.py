@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wxsrmc29i_bpx*l_(82*m*muyp=_pnz=+*k!)_yxybuz$pex0='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['herocall.eu-gb.mybluemix.net']
 
