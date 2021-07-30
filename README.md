@@ -1,6 +1,4 @@
-# Submission or project name
-
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/get-started/) [![Website](https://img.shields.io/badge/View-Website-blue)](https://sample-project.s3-web.us-east.cloud-object-storage.appdomain.cloud/)
+# HeroCall
 
 A basic GitHub repository example for new [Call for Code](https://developer.ibm.com/callforcode/) projects and those that join the Call for Code with The Linux Foundation deployment initiative. Not all sections or files are required. You can make this as simple or as in-depth as you need. And don't forget to [register for Call for Code 2021](https://developer.ibm.com/callforcode/get-started/)!
 
@@ -23,13 +21,12 @@ _Read this in other languages: [English](README.md), [한국어](./docs/README.k
   - [Getting started](#getting-started)
   - [Live demo](#live-demo)
   - [Built with](#built-with)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
   - [Authors](#authors)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
 ## Short description
+HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
@@ -49,67 +46,68 @@ It's imperative that learning and creating can continue when educational institu
 
 ## The architecture
 
-![Video transcription/translation app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
+![Architecture](./images/architecture.png)
 
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
+1. The user navigates to the site.
+2. The Django server recieves the request.
+3. It makes a query to the local database to access the requested post(s).
+4. The result is sent back to the user in a neat way.
 
 ## Long description
 
-[More detail is available here](./docs/DESCRIPTION.md)
+[More detail is available here](./DESCRIPTION.md)
 
 ## Project roadmap
 
-The project currently does the following things.
+The platform currently does the following things.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Post creation.
+- Horizontal replies.
+- Different tabs for a post.
 
-It's in a free tier IBM Cloud Kubernetes cluster. In the future we plan to run on Red Hat OpenShift, for example.
+In the coming months, we plan to add some features to make this platform ready for production. Some of them are:
+- Voting system for best replies and solutions.
+- Collaborative space for brain storming.
+- Browsing feature.
+
+This is just the begining. HeroCall has the potential to help a lot of people all around the world. We will become this idea into a real impactful platform.
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
-![Roadmap](./images/roadmap.jpg)
+![Roadmap](./images/roadmap.png)
 
 ## Getting started
 
-In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
+To get started using our code, clone the repository. Next, run the following commands from your directory:
 
-- [sample-react-app](./sample-react-app/)
-- [sample-angular-app](./sample-angular-app/)
-- [Explore other projects](https://github.com/upkarlidder/ibmhacks)
+- Create a virtual environment and install all the packages:
+  - `cd heronet`
+  - `python -m venv venv`
+  - `pip install -r requirements.txt`
+- Run the local server:
+  - `cd heroweb'
+  - `python manage.py runserver`
+
+The server will be running at 127.0.0.1:8000
 
 ## Live demo
 
-You can find a running system to test at [callforcode.mybluemix.net](http://callforcode.mybluemix.net/).
+You can find the live demo at [herocall.eu-gb.mybluemix.net](https://herocall.eu-gb.mybluemix.net/).
 
 ## Built with
 
-- [IBM Cloudant](https://cloud.ibm.com/catalog?search=cloudant#search_results) - The NoSQL database used
-- [IBM Cloud Functions](https://cloud.ibm.com/catalog?search=cloud%20functions#search_results) - The compute platform for handing logic
-- [IBM API Connect](https://cloud.ibm.com/catalog?search=api%20connect#search_results) - The web framework used
-- [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-- [Maven](https://maven.apache.org/) - Dependency management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+- [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview) - Container and hosting service
+- [Python Django App](https://cloud.ibm.com/developer/appservice/create-app?starterKit=5ef1a664-8ff5-3ebb-b6d2-a8478e3cb789&defaultLanguage=undefined) - Starter kid to run Django
+- [Django](https://www.djangoproject.com/) - Web framework used
 
 ## Authors
 
-<a href="https://github.com/Call-for-Code/Project-Sample/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Call-for-Code/Project-Sample" />
-</a>
+We are 4 engineering students from University College Dublin (Ireland)
+- [Patrick Tallon](https://github.com/PatrickTallon)
+- [Ella-Cyndy Banjoko-Johnson](https://github.com/THExR0CKxJoHNSoN)
+- [Evanna Niall](https://github.com/evannaniall)
+- [Daniel Álvarez Carreño](https://github.com/TuHechiceroFavorito)
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
 
 ## License
 
@@ -117,4 +115,4 @@ This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE)
 
 ## Acknowledgments
 
-- Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
+- Based on [Call for Code's README template](https://github.com/Call-for-Code/Project-Sample).
