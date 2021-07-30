@@ -99,7 +99,7 @@ You can find the live demo at [herocall.eu-gb.mybluemix.net](https://herocall.eu
 
 We are 4 engineering students from University College Dublin (Ireland)
 - [Patrick Tallon](https://github.com/PatrickTallon)
-- [Ella-Cyndy](https://github.com/THExR0CKxJoHNSoN)
+- [Ella-Cyndy Banjoko-Johnson](https://github.com/THExR0CKxJoHNSoN)
 - [Evanna Niall](https://github.com/evannaniall)
 - [Daniel Álvarez Carreño](https://github.com/TuHechiceroFavorito)
 
