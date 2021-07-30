@@ -97,11 +97,12 @@ You can find the live demo at [herocall.eu-gb.mybluemix.net](https://herocall.eu
 
 ## Authors
 
-<a href="https://github.com/CFC-Heronet/heronet/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=CFC-Heronet/heronet" />
-</a>
+We are 4 engineering students from University College Dublin (Ireland)
+- [Patrick Tallon](https://github.com/PatrickTallon)
+- [Ella-Cyndy](https://github.com/THExR0CKxJoHNSoN)
+- [Evanna Niall](https://github.com/evannaniall)
+- [Daniel Álvarez Carreño](https://github.com/TuHechiceroFavorito)
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
 
 ## License
 
