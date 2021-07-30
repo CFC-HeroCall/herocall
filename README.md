@@ -26,7 +26,7 @@ HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
-There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcome succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in more need are the one that less issues are going to overcome.
+There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcomed succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in more need are the one that less issues are going to solve.
 
 ### The idea
 
