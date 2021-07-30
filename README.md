@@ -4,7 +4,7 @@ HeroCall is our solution to the challenge proposed by [Call for Code](https://de
 
 ## Contents
 
-- [Submission or project name](#submission-or-project-name)
+- [HeroCall](#herocall)
   - [Contents](#contents)
   - [Short description](#short-description)
     - [What's the problem?](#whats-the-problem)
