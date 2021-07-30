@@ -10,7 +10,7 @@ def org_replies(replies, tab_id):
     views = []
     for reply in replies:
         if reply.reply_tab == tab_id:
-            if i % 3 == 0:
+            if i % 2 == 0:
                 views.append([reply])
             else:
                 views[len(views)-1].append(reply)

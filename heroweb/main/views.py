@@ -16,7 +16,7 @@ def test(request):
     return render(request, 'test.html')
 
 def explore(request):
-    posts_raw = Post.objects.all().reverse()
+    posts_raw = Post.objects.all()
     indeces = list(range(len(posts_raw)))
     indeces.reverse()
     posts = []
