@@ -2,10 +2,6 @@
 
 A basic GitHub repository example for new [Call for Code](https://developer.ibm.com/callforcode/) projects and those that join the Call for Code with The Linux Foundation deployment initiative. Not all sections or files are required. You can make this as simple or as in-depth as you need. And don't forget to [register for Call for Code 2021](https://developer.ibm.com/callforcode/get-started/)!
 
-> If you're new to open source, please consider taking the [free "Introduction to Open Source" class](https://cognitiveclass.ai/courses/introduction-to-open-source).
-
-_Read this in other languages: [English](README.md), [한국어](./docs/README.ko.md), [português](./docs/README.pt_br.md)._
-
 ## Contents
 
 - [Submission or project name](#submission-or-project-name)
@@ -30,7 +26,7 @@ HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
-Part of the World Health Organization's guidance on limiting further spread of COVID-19 is to practice social distancing. As a result, schools in most affected areas are taking precautionary measures by closing their facilities. With school-aged children at home for an indeterminate amount of time, keeping them engaged, entertained, and on top of their education is important.
+There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcome succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in more need are the one that less issues are going to overcome.
 
 ### How can technology help?
 
