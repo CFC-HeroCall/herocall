@@ -48,10 +48,10 @@ It's imperative that learning and creating can continue when educational institu
 
 ![Video transcription/translation app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
 
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
+1. The user navigates to the site.
+2. The Django server recieves the request.
+3. It makes a query to the local database to access the requested post(s).
+4. The result is sent back to the user in a neat way.
 
 ## Long description
 
@@ -61,11 +61,16 @@ It's imperative that learning and creating can continue when educational institu
 
 The platform currently does the following things.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Post creation.
+- Horizontal replies.
+- Different tabs for a post.
 
-It's in a free tier IBM Cloud Kubernetes cluster. In the future we plan to run on Red Hat OpenShift, for example.
+In the coming months, we plan to add some features to make this platform ready for production. Some of them are:
+- Voting system for best replies and solutions.
+- Collaborative space for brain storming.
+- Browsing feature.
+
+This is just the begining. HeroCall has the potential to help a lot of people all around the world. We will become this idea into a real impactful platform.
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
@@ -75,10 +80,11 @@ See below for our proposed schedule on next steps after Call for Code 2021 submi
 
 To get started using our code, clone the repository. Next, run the following commands from your directory:
 
-- Create a virtual environment and install all the packages.
+- Create a virtual environment and install all the packages:
+  - `cd heronet`
   - `python -m venv venv`
   - `pip install -r requirements.txt`
-- Run the local server
+- Run the local server:
   - `cd heroweb'
   - `python manage.py runserver`
 
