@@ -1,5 +1,4 @@
 {% load static %}
-<!-- header -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +9,6 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title></title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -21,6 +19,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet"> 
+
+    <title>
+        {% if title %}
+            HeroCall - {{title}}
+        {% else %}
+            HeroCall
+        {% endif %}
+    </title>
+
 </head>
 <body>
     <header>

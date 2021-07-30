@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load hero_comments %}
 {% block content %}
 <div class='container'>
     <div class='row border p-5 post rounded'>
@@ -6,7 +7,7 @@
         <h1 class='text-center m-4 post-title'>{{main_post.title}}</h1>
         <p class='text-end'>Author: {{main_post.author}}</p>
         <hr>
-        <p>{{main_post.text}}</p>
+        <p>{{main_post.text|markdown_parse}}</p>
         <!-- Tabs of the post -->
         <nav class='mt-5'>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">

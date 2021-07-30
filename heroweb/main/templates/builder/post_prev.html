@@ -11,7 +11,7 @@
         </div>
         <hr>
         <div class='row'>
-            <p>{{post.text}}</p>
+            <p>{{post.text|markdown_parse}}</p>
         </div>
        
         {% comment %}
