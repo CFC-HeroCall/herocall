@@ -74,7 +74,7 @@ This is just the begining. HeroCall has the potential to help a lot of people al
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
-![Roadmap](./images/roadmap.jpg)
+![Roadmap](./images/roadmap.png)
 
 ## Getting started
 
