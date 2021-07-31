@@ -8,7 +8,7 @@ We have lots of ideas for lots of issues. We had to choose one specific problem.
 not solve all the issues? Realistically, it is impossible that we can solve every issue in the world,
 mainly because we don’t know all of them. However, what if people could report their
 problems? What if anyone in the world had access to these reports? What if anyone could
-respond to the call for help? That is Heronet. A worldwide network of heroes that help people
+respond to the call for help? That is HeroCall. A worldwide network of heroes that help people
 in need.
 
 ## In depth
