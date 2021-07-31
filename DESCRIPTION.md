@@ -34,6 +34,11 @@ code, they’re just a set of instructions and tips to follow to solve a specifi
 method has been tested successful previously.
 In addition, there is no other platform that combines these two features in one.
 
+In the future, we plan to demolish language barriers by automatically translating every post, comment or contribution to the language of the reader.
+<!-- In the future, we aim to automatically translate every post, comment or contribution made to a workspace to the language of the reader. -->
+This key feature will make our platform stand out from all previously existing forum-type platforms.
+It expands the scope of people that heroes can help from just those who speak the same language to virtually anyone in the world with an internet connection!
+
 ## Final thoughts
 We are sure that HeroCall has a lot of potential. Experts can help people in need by providing
 their knowledge and guidance. University students can improve their CV and their real-world
