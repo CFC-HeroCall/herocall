@@ -8,6 +8,9 @@
 
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/60b2ca327b.js" crossorigin="anonymous"></script>
+    <!-- <link rel="icon" href="/heroweb/main/static/img/hero4.png" type="image/x-icon"> -->
+    <link rel="shortcut icon" type='image/png' href="{% static 'img/favicon.ico' %}">
 
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
@@ -33,29 +36,30 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/" style="font-family: 'PT Sans Caption', sans-serif;">HeroCall</a>
+                <img src="{% static 'img/hero4.png' %}" alt="logo" style="height: 40px; margin-right: 10px;">
+                <a class="navbar-brand" href="/" style="font-family: 'Staatliches', cursive;">HeroCall</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{% url 'make_post' %}">Make a post</a>
+                            <a class="nav-link" href="{% url 'make_post' %}"><i class="fas fa-pencil-alt"></i> Make a post</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="{% url 'explore' %}">Explore</a>
+                            <a class="nav-link" href="{% url 'explore' %}"><i class="fab fa-wpexplorer"></i> Explore</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">What is HeroCall</a>
+                            <a class="nav-link" href="#"><i class="far fa-question-circle"></i> What is HeroCall?</a>
                         </li>
                         <li class="nav-item mx-2">
-                            <a class="nav-link" href="#">Why should I help</a>
+                            <a class="nav-link" href="#"><i class="fas fa-hands-helping"></i> Why should I help?</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
                         {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'profile' %}">Profile</a>
+                                <a class="nav-link" href="{% url 'profile' %}"><i class="far fa-user"></i> Profile</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'logout' %}">Log out</a>

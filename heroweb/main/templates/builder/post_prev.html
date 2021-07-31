@@ -1,5 +1,5 @@
 {% load hero_comments %}
-<div class="card m-4 p-3 post-preview rounded" style="width: 20rem;" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
+<div class="card m-4 p-3 post-preview rounded reply-post" style="width: 20rem; {% if selected == 'focused' %}hover(this){% endif %}" onclick="{% if selected == 'focused' %}focused(this){% endif %}">
     <div class="card-body">
         <div class='row'>
             <h5 class="card-title my-0 text-center">
