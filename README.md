@@ -8,7 +8,6 @@ HeroCall is our solution to the challenge proposed by [Call for Code](https://de
   - [Contents](#contents)
   - [Short description](#short-description)
     - [What's the problem?](#whats-the-problem)
-    - [How can technology help?](#how-can-technology-help)
     - [The idea](#the-idea)
   - [Demo video](#demo-video)
   - [The architecture](#the-architecture)
