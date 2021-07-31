@@ -87,9 +87,9 @@ You can find the live demo at [herocall.eu-gb.mybluemix.net](https://herocall.eu
 
 ## Built with
 
-- [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview) - Container and hosting service
-- [Python Django App](https://cloud.ibm.com/developer/appservice/create-app?starterKit=5ef1a664-8ff5-3ebb-b6d2-a8478e3cb789&defaultLanguage=undefined) - Starter kid to run Django
-- [Django](https://www.djangoproject.com/) - Web framework used
+- [IBM Cloud Foundry](https://cloud.ibm.com/cloudfoundry/overview) - Container and hosting service.
+- [Python Django App](https://cloud.ibm.com/developer/appservice/create-app?starterKit=5ef1a664-8ff5-3ebb-b6d2-a8478e3cb789&defaultLanguage=undefined) - Starter kit to run Django used to start the demo.
+- [Django](https://www.djangoproject.com/) - Web framework used.
 
 ## Authors
 
