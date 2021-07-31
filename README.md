@@ -62,11 +62,11 @@ In the coming months, we plan to add some features to make this platform ready f
 - Collaborative space for brain storming.
 - Browsing feature.
 
-This is just the begining. HeroCall has the potential to help a lot of people all around the world. We will become this idea into a real impactful platform.
-
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
 
 ![Roadmap](./images/roadmap.png)
+
+This is just the begining. HeroCall has the potential to help a lot of people all around the world. We will become this idea into a real impactful platform.
 
 ## Getting started
 
