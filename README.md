@@ -25,11 +25,11 @@ HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
-There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues faced by those with better access to information are more likely to be overcome. Conversely, people with no knowledge have less of a means to solve issues. We see this as inherently unfair, as it means that the people in greater need are the ones with less opportunity to fix their issues.
+There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues faced by those with better access to information are more likely to be overcome. Yet, people with no knowledge have less of a means to solve their problems. We see this as inherently unfair, as it means that the people in greater need are the ones with less opportunity to fix their issues.
 
 ### The idea
 
-HeroCall aims to bridge this gap. It will connect people that have knowledge with people that need it. Potentially, it is a means of solving any issues anyone has. It will be a web-based platform. The fact that it is a website makes it highly accesible. People only need a device with a browser and internet connection. This actually means that really basic hardware is needed, which helps bridge any technological gap. This was the lowest hardware requirement level the team came up with in order to reach as many people as possible.
+HeroCall aims to bridge this gap. It will connect people that have knowledge with people that need it. Potentially, it is a means of solving any issues anyone has. It will be a web-based platform. The fact that it is a website makes it highly accesible. People only need a device with a browser and internet connection. This actually means that really basic hardware is sufficient, which helps bridge any technological gap. This was the lowest hardware requirement level the team came up with in order to reach as many people as possible.
 
 ## Demo video
 
@@ -56,7 +56,7 @@ The platform currently does the following things.
 - Horizontal replies.
 - Different, customizable tabs for a post.
 
-In the coming months, we aim to add some features and make improvements to make this platform ready for production. Some of them are:
+In the coming months, we aim to add some features while making improvements to make this platform ready for use. Proposed changes include:
 - Voting system for best replies and solutions.
 - Automatic translation of all text to the language of the reader.
 - Workspace for brain storming and collaboration between users.
