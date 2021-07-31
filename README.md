@@ -60,7 +60,6 @@ In the coming months, we aim to add some features while making improvements to m
 - Voting system for best replies and solutions.
 - Automatic translation of all text to the language of the reader.
 - Workspace for brain storming and collaboration between users.
-- Video call feature.
 - A more intuitive and aesthetically pleasing UI.
 - Browsing feature.
 
