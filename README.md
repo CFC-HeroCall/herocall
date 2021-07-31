@@ -54,11 +54,14 @@ The platform currently does the following things.
 
 - Post creation.
 - Horizontal replies.
-- Different tabs for a post.
+- Different, customizable tabs for a post.
 
-In the coming months, we plan to add some features to make this platform ready for production. Some of them are:
+In the coming months, we aim to add some features and make improvements to make this platform ready for production. Some of them are:
 - Voting system for best replies and solutions.
-- Collaborative space for brain storming.
+- Automatic translation of all text to the language of the reader.
+- Workspace for brain storming and collaboration between users.
+- Video call feature.
+- A more intuitive and aesthetically pleasing UI.
 - Browsing feature.
 
 See below for our proposed schedule on next steps after Call for Code 2021 submission.
