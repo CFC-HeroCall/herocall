@@ -73,7 +73,6 @@ This is just the begining. HeroCall has the potential to help a lot of people al
 To get started using our code, clone the repository. Next, run the following commands from your directory:
 
 - Create a virtual environment and install all the packages:
-  - `cd heronet`
   - `python -m venv venv`
   - `pip install -r requirements.txt`
 - Run the local server:
