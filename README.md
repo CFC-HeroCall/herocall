@@ -25,11 +25,11 @@ HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
-There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcomed succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in more need are the one that less issues are going to solve.
+There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcome succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in greater need are the ones with less chance to fix their issues.
 
 ### The idea
 
-HeroCall aims to bridge this gap. It will connect people that has knowledge with people that needs this knowledge. Potentially, it is a means of solving any issue that anyone can have. It will be a web-based platform. The fact that it is a website makes it highly accesible. People only need a device with a browser and internet connection. This actually means that really basic hardware is needed, which helps bridge any technological gap. This was the most hardware-basic way the team came up in order to reach as many people as possible.
+HeroCall aims to bridge this gap. It will connect people that have knowledge with people that need it. Potentially, it is a means of solving any issues anyone has. It will be a web-based platform. The fact that it is a website makes it highly accesible. People only need a device with a browser and internet connection. This actually means that really basic hardware is needed, which helps bridge any technological gap. This was the lowest hardware requirement level the team came up with in order to reach as many people as possible.
 
 ## Demo video
 
@@ -68,7 +68,7 @@ See below for our proposed schedule on next steps after Call for Code 2021 submi
 
 ![Roadmap](./images/roadmap.png)
 
-This is just the begining. HeroCall has the potential to help a lot of people all around the world. We will become this idea into a real impactful platform.
+This is just the begining. HeroCall has the potential to help a lot of people all around the world. We hope that we can shape this into a real impactful platform.
 
 ## Getting started
 
