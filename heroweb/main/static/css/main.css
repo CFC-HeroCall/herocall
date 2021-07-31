@@ -64,10 +64,18 @@ h1 {
     }
 
     .post-preview a {
-        color:#616060
+        color:rgb(91, 126, 208);
     }
 
-    .post-preview:hover {
+    .post-preview a:hover {
+        color:#A421B7;
+    }
+
+    /* .post-preview:hover {
+        
+    } */
+
+    .reply-post:hover{
         background-color: #fcd08e;
         transition: 0.5s;
     }
@@ -93,4 +101,8 @@ h1 {
     button.active.nav-link {
         background-color: inherit!important;
         border-bottom: none;
+    }
+
+    strong{
+        font-family: 'Staatliches', cursive;
     }

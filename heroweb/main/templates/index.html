@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
 <div class='container'>
-    <div class="row text-center">
+    <div class="row text-center" >
+        <img src="{% static 'img/hero4.png' %}" alt="logo" style="height: contain; width: 400px; margin: auto;">
         <h1 class='mb-3 display-1'><b><strong>HeroCall</strong></b></h1>
         <hr>
         <h2>Become a hero!</h2>
