@@ -28,19 +28,19 @@ credibility to future posts that they make in the platform.
 
 Our solution is a website, which can be described as a mix between a forum and a
 collaboration platform. It is similar to Quora and Stack Overflow in the sense that it allows for
-people to ask a question and get an answer. Heronet is specifically targeted for people in need.
+people to ask a question and get an answer. HeroCall is specifically targeted for people in need.
 The solution posts are similar to GitHub repositories. However, solutions are not only about
 code, they’re just a set of instructions and tips to follow to solve a specific issue for which the
 method has been tested successful previously.
 In addition, there is no other platform that combines these two features in one.
 
 ## Final thoughts
-We are sure that Heronet has a lot of potential. Experts can help people in need by providing
+We are sure that HeroCall has a lot of potential. Experts can help people in need by providing
 their knowledge and guidance. University students can improve their CV and their real-world
 experience during summer by becoming heroes. Even previous people that have been helped
 can post and become a hero by providing their knowledge to new users.
 
 ## Conclusion
-Heronet has a lot of potential, given its wide action field. It doesn’t solve a specific issue, but it’s the
+HeroCall has a lot of potential, given its wide action field. It doesn’t solve a specific issue, but it’s the
 means of solving any issue. It is very in line with the IBM Call for Code goals, and we think it is
 exactly what the world needs in order to grow together as a global society.
