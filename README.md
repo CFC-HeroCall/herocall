@@ -25,7 +25,7 @@ HeroCall is a collaborative platform to solve issues anywhere in the globe.
 
 ### What's the problem?
 
-There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues that these people faced are more likely to be overcome succesfully. However, people with no knowledge have less means to solve issues. This is really unfair, as it means that the people in greater need are the ones with less chance to fix their issues.
+There is a lack of information and knowledge in underdeveloped areas. This knowledge is abundant and easily accesible in other parts of the world. Any issues faced by those with better access to information are more likely to be overcome. Conversely, people with no knowledge have less of a means to solve issues. We see this as inherently unfair, as it means that the people in greater need are the ones with less opportunity to fix their issues.
 
 ### The idea
 
@@ -60,7 +60,7 @@ In the coming months, we aim to add some features and make improvements to make 
 - Voting system for best replies and solutions.
 - Automatic translation of all text to the language of the reader.
 - Workspace for brain storming and collaboration between users.
-- Video call feature.
+- Video call feature. ??
 - A more intuitive and aesthetically pleasing UI.
 - Browsing feature.
 
