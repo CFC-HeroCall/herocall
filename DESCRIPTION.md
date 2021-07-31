@@ -45,6 +45,6 @@ their free time by becoming heroes. Even people that have already received help 
 and become a hero by sharing their knowledge with newer users.
 
 ## Conclusion
-HeroCall has a lot of potential, given its wide action field. It doesn’t solve a specific issue, but it’s a
+HeroCall has a lot of potential, given its broad scope. It doesn’t solve a specific issue, but it can be
 catalyst for solving many. It is very in line with the IBM Call for Code goals, and we think it is
 exactly what the world needs in order to grow together as a global society.
