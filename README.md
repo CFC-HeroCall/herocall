@@ -33,7 +33,7 @@ HeroCall aims to bridge this gap. It will connect people that have knowledge wit
 
 ## Demo video
 
-[![Watch the video](./HeroCall-video-image.png)](https://youtu.be/SyU1_-q-b6U)
+[![Watch the video](./images/HeroCall-video-image.png)](https://youtu.be/SyU1_-q-b6U)
 
 ## The architecture
 
