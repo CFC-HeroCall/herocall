@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from main.models import Post, Tab
 from main.forms import PostCreationForm
 
@@ -47,6 +48,7 @@ def delete_post(request):
     messages.success(request, f"Post deleted succesfully")
     return redirect(request.GET['location'])
 
+@login_required
 def make_post(request):
     if request.method == "POST":
         #Access the form through the request object
