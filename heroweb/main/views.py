@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from main.models import Post, Tab
 from main.forms import PostCreationForm
+from django.db.models import Q
 
 # Create your views here.
 def home(request):
@@ -17,7 +18,18 @@ def test(request):
     return render(request, 'test.html')
 
 def explore(request):
-    posts_raw = Post.objects.all().filter(reply_tab=None)
+    if request.method == 'GET':
+        posts_raw = Post.objects.all().filter(reply_tab=None)
+        search = ''
+
+    elif request.method == "POST":
+        search = request.POST["search"]
+        print(search)
+        if search == '':
+            posts_raw = Post.objects.all().filter(reply_tab=None)
+        else:
+            posts_raw = Post.objects.all().filter(Q(title__contains=search) | Q(text__contains=search))
+
     indeces = list(range(len(posts_raw)))
     indeces.reverse()
     posts = []
@@ -25,7 +37,7 @@ def explore(request):
     for index in indeces:
         posts.append(posts_raw[index])
 
-    return render(request, 'explore.html', {'posts':posts})
+    return render(request, 'explore.html', {'posts':posts, "search":search})
 
 def post(request, id):
     # Same as explore, but getting the id of the post that the user is looking at.
